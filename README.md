@@ -1,6 +1,10 @@
-# Snapface
+# InstaClone
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
+
+#ToDo 
+-[ ] Highlight.js in Angular 2+ on dynamic content
+ https://adevsolvedit.com/1002/highlightjs-in-angular-2-on-dynamic-content
 
 ## Development server
 
