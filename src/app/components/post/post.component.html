@@ -1,12 +1,12 @@
 <div class="post">
   <div class="d-flex mb-1 px-1">
     <div class="border-color">
-    <img class="profil-picture" [src]="this.profilPicture" [alt]="this.author">
+    <img class="profil-picture" [src]="post.profilPicture" [alt]="post.author">
     </div>
-    <p class="m-1">{{ this.author }}</p>
+    <p class="m-1">{{ post.author }}</p>
   </div>
 
-  <img class="post-picture mb-1" [src]="this.img" alt="{{this.title}}">
+  <img class="post-picture mb-1" [src]="post.img" alt="{{post.title}}">
   <div class="d-flex justify-content w-100 px-1">
     <div>
       <button (click)="onLike()">
@@ -27,5 +27,8 @@
     <!--<i class="fa-solid fa-bookmark"></i>-->
   </button>
   </div>
-  <p class="px-1">{{ like }} J'aime</p>
+  <p class="px-1">{{ post.like }} J'aime</p>
+  <p class="px-1">{{ post.description}}</p>
+  <p class="px-1">{{ post.createdDate}}</p>
+
 </div>
