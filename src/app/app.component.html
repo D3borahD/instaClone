@@ -1,4 +1,3 @@
-<!--<app-post></app-post>-->
-<app-post [post] = "post1"></app-post>
-<app-post [post] = "post2"></app-post>
-<app-post [post] = "post3"></app-post>
+<app-post *ngFor="let post of posts" [post] = "post" ></app-post>
+
+<p ngNonBindable>This should not evaluate: {{ 1 + 1 }}</p>
