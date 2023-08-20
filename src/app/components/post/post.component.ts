@@ -11,6 +11,7 @@ export class PostComponent implements OnInit {
   @Input() post!: PostModel;
 
   public liked:boolean=false
+  public saved:boolean=false
 
 
   ngOnInit(): void {
@@ -24,5 +25,9 @@ export class PostComponent implements OnInit {
       this.post.like--
       this.liked = false
     }
+  }
+
+  save() {
+    this.saved ? this.saved=false : this.saved=true
   }
 }
