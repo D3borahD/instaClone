@@ -33,6 +33,6 @@
   </div>
   <p class="px-1">{{ post.like }} J'aime</p>
   <p class="px-1">{{ post.description}}</p>
-  <p class="px-1">{{ post.createdDate}}</p>
+  <p class="px-1">{{ post.createdDate | date: 'longDate'}}</p>
 
 </div>
