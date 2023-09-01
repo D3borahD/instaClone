@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {PostModel} from "../../models/post.model";
+import {PostsService} from "../../services/posts.service";
 
 @Component({
   selector: 'app-post',
@@ -13,16 +14,17 @@ export class PostComponent implements OnInit {
   public liked:boolean=false
   public saved:boolean=false
 
+  constructor(private postService: PostsService) {}
 
   ngOnInit(): void {
   }
 
   onLike() {
     if(this.liked === false) {
-      this.post.like++
+      this.postService.likePostById(this.post.id, 'like')
       this.liked = true
     } else {
-      this.post.like--
+      this.postService.likePostById(this.post.id, 'unlike')
       this.liked = false
     }
   }
