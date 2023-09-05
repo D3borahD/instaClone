@@ -28,7 +28,6 @@ export class PostComponent implements OnInit {
       this.liked = false
     }
   }
-
   save() {
     this.saved ? this.saved=false : this.saved=true
   }

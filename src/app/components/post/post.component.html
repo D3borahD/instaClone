@@ -1,17 +1,17 @@
 <div class="post">
-  <div class="d-flex mb-1 px-1">
-    <div class="border-color">
-    <img class="profil-picture" [src]="post.profilPicture" [alt]="post.author">
+  <div class="d-flex mb-1 p-1">
+    <div class="border-color ">
+      <img class="profil-picture" [src]="post.profilPicture" [alt]="post.author">
     </div>
     <div class="mx-1">
       <p>{{ post.author }}</p>
       <p *ngIf="post.location">Localisation : {{post.location}}</p>
     </div>
-
   </div>
 
-  <img class="post-picture mb-1" (click)="onLike()" [src]="post.img" alt="{{post.title}}">
-  <div class="d-flex justify-content w-100 px-1">
+  <img class="w-100 mb-1" (click)="onLike()" [src]="post.img" alt="{{post.title}}" >
+
+  <div class="d-flex justify-content px-1">
     <div>
       <button class="btn" (click)="onLike()">
         <i *ngIf="liked" class="fa-solid fa-heart fa-lg red"></i>
@@ -23,16 +23,14 @@
       <button class="btn" >
         <i class="fa-regular fa-paper-plane fa-lg"></i>
       </button>
-
     </div>
-  <i class="fa-solid fa-ellipsis"></i>
-  <button class="px-1 btn" (click)="save()">
-    <i *ngIf="!saved" class="fa-regular fa-bookmark fa-lg"></i>
-    <i *ngIf="saved" class="fa-solid fa-bookmark fa-lg"></i>
-  </button>
+    <i class="fa-solid fa-ellipsis"></i>
+    <button class="px-1 btn" (click)="save()">
+      <i *ngIf="!saved" class="fa-regular fa-bookmark fa-lg"></i>
+      <i *ngIf="saved" class="fa-solid fa-bookmark fa-lg"></i>
+    </button>
   </div>
   <p class="px-1">{{ post.like }} J'aime</p>
   <p class="px-1">{{ post.description}}</p>
   <p class="px-1">{{ post.createdDate | date: 'longDate'}}</p>
-
 </div>
