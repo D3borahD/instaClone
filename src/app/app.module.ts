@@ -10,6 +10,8 @@ import { HeaderComponent } from './header/header.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { UserComponent } from './components/user/user.component';
+import { SinglePostComponent } from './components/single-post/single-post.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { NavigationComponent } from './navigation/navigation.component';
     PostListComponent,
     HeaderComponent,
     PageNotFoundComponent,
-    NavigationComponent
+    NavigationComponent,
+    UserComponent,
+    SinglePostComponent
   ],
   imports: [
     BrowserModule,

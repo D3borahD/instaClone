@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {PostModel} from "../../models/post.model";
 import {PostsService} from "../../services/posts.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-post',
@@ -8,13 +9,13 @@ import {PostsService} from "../../services/posts.service";
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
-
   @Input() post!: PostModel;
 
   public liked:boolean=false
   public saved:boolean=false
 
-  constructor(private postService: PostsService) {}
+
+  constructor(private postService: PostsService,  private router: Router)  {}
 
   ngOnInit(): void {
   }
@@ -30,5 +31,9 @@ export class PostComponent implements OnInit {
   }
   save() {
     this.saved ? this.saved=false : this.saved=true
+  }
+  onViewPost() {
+    // on utilise les backticks `
+    this.router.navigateByUrl(`posts/${this.post.id}`)
   }
 }
