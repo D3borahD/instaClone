@@ -1,3 +1,7 @@
-<app-post *ngFor="let post of posts" [post] = "post" ></app-post>
+<app-header></app-header>
+<div class="d-flex w-100">
+  <app-navigation></app-navigation>
+  <h1>{{ interval$ | async}}</h1>
+  <router-outlet></router-outlet>
+</div>
 
-<p ngNonBindable>This should not evaluate: {{ 1 + 1 }}</p>

@@ -6,7 +6,7 @@
     <div class="mx-1">
       <p>{{ post.author }}</p>
       <p *ngIf="post.location">Localisation : {{post.location}}</p>
-      <button (click)="onViewPost()">Voir le post</button>
+      <button (click)="onBack()">Retour</button>
     </div>
   </div>
 
@@ -18,9 +18,9 @@
         <i *ngIf="liked" class="fa-solid fa-heart fa-lg red"></i>
         <i *ngIf="!liked" class="fa-regular fa-heart fa-lg"></i>
       </button>
-     <button class="mx-1 btn">
-       <i class="fa-regular fa-comment fa-lg"></i>
-     </button>
+      <button class="mx-1 btn">
+        <i class="fa-regular fa-comment fa-lg"></i>
+      </button>
       <button class="btn" >
         <i class="fa-regular fa-paper-plane fa-lg"></i>
       </button>
