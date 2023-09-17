@@ -24,6 +24,8 @@ export class SinglePostComponent implements OnInit {
     // les paramètres d'une route sont de type string.
     // '+' est un type cast qui transforme une string en number
     const postId = +this.route.snapshot.params['id']
+    console.log('post id : ', postId, this.router.url)
+
     this.post = this.postService.getPostById(postId)
   }
 

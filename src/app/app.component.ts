@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {PostModel} from "./models/post.model";
+import {filter, interval, map, Observable, tap} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -7,8 +7,22 @@ import {PostModel} from "./models/post.model";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  title = 'instaclone';
+    title = 'instaclone';
+    public interval$!: Observable<string>;
 
-  ngOnInit() {
-  }
+    ngOnInit():void {
+/*      this.interval$ = interval(1000).pipe(
+        filter(value => value % 3 === 0),
+        map(value => value % 2 === 0 ?
+          `Je suis ${value} et je suis PAIR` :
+            `Je suis ${value} et je suis IMPAIR`
+        ),
+        tap(text => this.logger(text))
+      )*/
+    }
+
+    public logger(text:string):void {
+      console.log(`Log: ${text}`)
+    }
+
 }
